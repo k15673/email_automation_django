@@ -1,0 +1,14 @@
+<h2>Dashboard ✅</h2>
+<p>You are logged in.</p>
+
+<ul>
+  <li><a href="/reports/pdf/">Open PDF report</a></li>
+  <li><a href="/reports/pdf/?download=1">Download PDF report</a></li>
+  <li><a href="/bulk/">Bulk Email Page</a></li>
+  <li><a href="/admin/">Admin</a></li>
+</ul>
+
+<form method="post" action="/accounts/logout/">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+</form>

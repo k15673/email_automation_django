@@ -1,0 +1,11 @@
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+{{form}}<br>
+<button name="preview">Preview</button>
+<button name="send">Send</button>
+</form>
+
+{% if preview %}
+<h3>Preview</h3>
+To:{{preview.to}}<br>
+{{preview.msg}}
+{% endif %}

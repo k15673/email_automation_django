@@ -1,0 +1,7 @@
+<table border="1">
+<tr><th>To</th><th>Subject</th><th>Status</th><th>Time</th></tr>
+{% for l in logs %}
+<tr><td>{{l.recipient}}</td><td>{{l.subject}}</td><td>{{l.status}}</td><td>{{l.time}}</td></tr>
+{% endfor %}
+</table>
+<a href="/report">Download PDF</a>

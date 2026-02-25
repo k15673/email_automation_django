@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulk Email Sender</title>
+</head>
+<body>
+
+<h2>Bulk Email Sender ✅</h2>
+
+<form method="post" action="/bulk/">
+    {% csrf_token %}
+
+    <label>Recipients (comma separated):</label><br>
+    <textarea name="recipients" rows="3" cols="60"
+              placeholder="a@gmail.com, b@yahoo.com"
+              required></textarea><br><br>
+
+    <label>Subject:</label><br>
+    <input type="text" name="subject" size="60" required><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" rows="8" cols="60" required></textarea><br><br>
+
+    <label>Schedule time (optional):</label><br>
+    <input type="datetime-local" name="schedule_time"><br>
+    <small>Leave empty to send immediately</small><br><br>
+
+    <button type="submit">Send Email</button>
+</form>
+
+<br>
+<p><a href="/dashboard/">⬅ Back to Dashboard</a></p>
+
+</body>
+</html>
